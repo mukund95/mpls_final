@@ -12,7 +12,7 @@ import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.UnsupportedLookAndFeelException;
 //import simMPLS.ui.simulator.JSimulador;
-//import simMPLS.ui.splash.JSplash;
+import Splash.JSplash;
 
 /**
  *
@@ -70,11 +70,11 @@ public class MPLSsimulatorFinal {
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
             System.out.println("An error happened when starting OpenSimMPLS");
         }
-        //splash = new simMPLS.ui.splash.JSplash();
-//        splash.show();
-//        splash.ponerTexto(java.util.ResourceBundle.getBundle("simMPLS/lenguajes/lenguajes").getString("Loading_icons..."));
+        splash = new Splash.JSplash();
+        splash.show();
+        splash.showText(java.util.ResourceBundle.getBundle("language/language").getString("Loading_icons..."));
         //imagesBroker = new TImagesBroker();
-//        splash.ponerTexto(java.util.ResourceBundle.getBundle("simMPLS/lenguajes/lenguajes").getString("openSimMPLS.generandoInterfaz"));
+        splash.showText(java.util.ResourceBundle.getBundle("language/language").getString("openSimMPLS.generateInterface"));
         //simulator = new JSimulador(imagesBroker);
         //java.awt.Dimension tamPantalla = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
 //        simulator.setBounds(0, 0, tamPantalla.width, tamPantalla.height);
@@ -84,7 +84,7 @@ public class MPLSsimulatorFinal {
 
     // Variables declaration - do not modify
 //    private static TImagesBroker imagesBroker;
-//    private static JSplash splash;
+   private static JSplash splash;
 //    private static JSimulador simulator;
 }
 
